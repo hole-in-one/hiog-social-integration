@@ -145,6 +145,8 @@ while(true)
     if($fb_cli)
     {
 
+      msg('Processing Facebook posts...');
+
       foreach ($facebook_posts as $facebook_post)
       {
 
@@ -155,6 +157,8 @@ while(true)
         sleep (60);
 
       }
+
+      msg('Processing Facebook posts complete!');
 
     }else{
 
@@ -178,6 +182,8 @@ while(true)
     if($twitter)
     {
 
+      msg('Processing tweets....');
+
       foreach ($tweets as $tweet)
       {
 
@@ -188,6 +194,9 @@ while(true)
         sleep (60);
 
       }
+
+      msg('Processing tweets complete!');
+
 
     }
 
