@@ -154,7 +154,7 @@ while(true)
         $fb = 'fbcmd as 322799257840557 post "' . $facebook_post . '"';
         $output = shell_exec(escapeshellcmd($fb));
         msg($output);
-        sleep (60);
+        # sleep (60);
 
       }
 
@@ -191,23 +191,26 @@ while(true)
         $status = tweetable($tweet) ? $twitter->send($tweet): false;
         $status ? $twitter_api_calls++ : $twitter_api_calls;
         $status ? msg('Tweet posted!') : msg('Tweet failed! :-(');
-        sleep (60);
+        # sleep (60);
 
       }
 
       msg('Processing tweets complete!');
 
 
+    }else{
+
+      throw new Exception('Error: Unable to access the Twitter API. Please verify your API access credentials in config/twitter.php.');
+
     }
 
   }catch(Exception $e){
 
-    msg('Error: Unable to access the Twitter API. Please verify your API access credentials in config/twitter.php.');
-    msg('Error Code: ' .$e->getMessage());
+    msg($e->getMessage());
 
   }
 
-  sleep (1800000);
+  # sleep (1800000);
 
 
 }
