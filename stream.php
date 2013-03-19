@@ -45,14 +45,16 @@ while(true)
   $prize_money = $Model->prize_money(1);
   if(intval($prize_money) > 0)
   {
+
     $conversation = "The Hole In One prize money has reached R"  . number_format($prize_money) . "!";
     $tweets[] = $conversation;
     $facebook_posts[] = $conversation;
 
+    $conversation =  "Remember, you can only win if you have entered, visit http://hiog.mobi for more information.";
+    $tweets[] = $conversation;
+    $facebook_posts[] = $conversation;
+
   }
-  $conversation =  "Remember, you can only win if you have entered, visit http://hiog.mobi for more information.";
-  $tweets[] = $conversation;
-  $facebook_posts[] = $conversation;
 
   // Get latest members.
   $latest_members = $Model->get_latest_members(5);
@@ -88,14 +90,16 @@ while(true)
   $current_contestants = $Model->current_contestants();
   if(intval($current_contestants) > 0)
   {
+
     $conversation = "We have so far "  . $current_contestants . " contestants for the current round of the Hole In One competition";
     $tweets[] = $conversation;
     $facebook_posts[] = $conversation;
 
+    $conversation =  "Have you booked your place yet to win big in the Hole In One competition? Enter now, visit http://hiog.mobi for more information.";
+    $tweets[] = $conversation;
+    $facebook_posts[] = $conversation;
+
   }
-  $conversation =  "Have you booked your place yet to win big in the Hole In One competition? Enter now, visit http://hiog.mobi for more information.";
-  $tweets[] = $conversation;
-  $facebook_posts[] = $conversation;
 
   // Get claims on prize money
   $current_claims = $Model->current_claims(24);
