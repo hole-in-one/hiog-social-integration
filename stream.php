@@ -71,7 +71,7 @@ while(true)
       $date_joined_formatted = date('d F Y', $latest_member->joined);
       $interval = intval($today->diff($date_joined)->format("%d"));
 
-      if(is_int($interval) && $interval > 1)
+      if(is_int($interval) && $interval <= 1)
       {
 
         $conversation = $latest_member->name . ', from ' . $latest_member->club . ' joined the Hole In One Golf competition on ' . $date_joined_formatted;
