@@ -36,8 +36,6 @@ require APP_PATH . 'includes/twitter/twitter.class.php';
 while(true)
 {
 
-  sleep (120);
-
   // Reset API call counters
   $facebook_api_calls = $twitter_api_calls = 0;
   $facebook_posts = $tweets = array();
@@ -154,7 +152,7 @@ while(true)
         $fb = 'fbcmd as 322799257840557 post ' . $facebook_post;
         $output = shell_exec(escapeshellcmd($fb));
         msg($output);
-        sleep (30);
+        sleep (60);
 
       }
 
@@ -187,7 +185,7 @@ while(true)
         $status = tweetable($tweet) ? $twitter->send($tweet): false;
         $status ? $twitter_api_calls++ : $twitter_api_calls;
         $status ? msg('Tweet posted!') : msg('Tweet failed! :-(');
-        sleep (30);
+        sleep (60);
 
       }
 

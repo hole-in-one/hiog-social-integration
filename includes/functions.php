@@ -10,7 +10,7 @@ define("CLI", !isset($_SERVER['HTTP_USER_AGENT']) );
 */
 function msg($message)
 {
-    if (!CLI)
+    if (CLI)
     {
       print("\n\t[" . date('d/m Y H:i') . '] ' . $message . ' (' . strlen($message) . ')');
     }
