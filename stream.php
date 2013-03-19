@@ -149,7 +149,7 @@ while(true)
       {
 
         msg('Facebook post composed: ' . $facebook_post);
-        $fb = 'fbcmd as 322799257840557 post ' . $facebook_post;
+        $fb = 'fbcmd as 322799257840557 post "' . $facebook_post . '"';
         $output = shell_exec(escapeshellcmd($fb));
         msg($output);
         sleep (60);
