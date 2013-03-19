@@ -2,13 +2,13 @@
 /**
 *
 * @package 			HIOG
-* @version $Id:		config.php 2012/12/10 10:01:45 PM
+* @version      $Id: config.php 2012/12/10 10:01:45 PM
 * @copyright		(c) 2013 Hole In One Golf
 * @link					http://hiog.mobi/
 * @author				R P du Plessis <renduples@gmail.com>
 * @description	Configuration settings
 *
-*/
+**/
 
 
 // Admin notifications
@@ -16,9 +16,9 @@ adminEmail = renduples@gmail.com
 
 
 // Database
-mobiPort = 3306
+mobiPort = 8889
 mobiUser = root
-mobiPwrd = toor
+mobiPwrd = root
 mobiHost = localhost
 mobiDb = hioc
 
@@ -29,11 +29,11 @@ supportEmail = enduples@gmail.com
 
 
 // Timezone see http://www.php.net/manual/en/timezones.php for supported timezones
-timeZone = Africa/Johannesburg		 
+timeZone = Africa/Johannesburg
 
 
 // Available languages eng,por,afr (must correspond with headings in language.csv)
-langDefault = eng																
+langDefault = eng
 
 
 // Allow language switching by users
@@ -53,7 +53,7 @@ keepStats = 0
 
 
 // Browser cookies - 60*60*24*360 days by default
-cookieExpire = 31536000 
+cookieExpire = 31536000
 cookiePath = /
 
 
