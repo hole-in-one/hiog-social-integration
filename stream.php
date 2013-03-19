@@ -59,10 +59,6 @@ while(true)
   if(is_array($latest_members))
   {
 
-    $conversation = "We glady welcome the following new members to the Hole In One Golf competition!";
-    $tweets[] = $conversation;
-    $facebook_posts[] = $conversation;
-
     foreach ($latest_members as $latest_member)
     {
 
@@ -81,6 +77,10 @@ while(true)
       }
 
     }
+
+    $conversation = "We invite all golfing enthusiasts to join the Hole In One Golf competition!";
+    $tweets[] = $conversation;
+    $facebook_posts[] = $conversation;
 
   }
 
