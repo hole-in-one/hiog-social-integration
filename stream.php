@@ -59,7 +59,7 @@ while(true)
   if(is_array($latest_members))
   {
 
-    $conversation = "We glady welcome the following new members to the Hole In One Golf tournament!";
+    $conversation = "We glady welcome the following new members to the Hole In One Golf competition!";
     $tweets[] = $conversation;
     $facebook_posts[] = $conversation;
 
@@ -74,7 +74,7 @@ while(true)
       if(is_int($interval) && $interval > 1)
       {
 
-        $conversation = $latest_member->name . ', from ' . $latest_member->club . ' joined the Hole In One Golf tournament on ' . $date_joined_formatted;
+        $conversation = $latest_member->name . ', from ' . $latest_member->club . ' joined the Hole In One Golf competition on ' . $date_joined_formatted;
         $tweets[] = $conversation;
         $facebook_posts[] = $conversation;
 
@@ -88,12 +88,12 @@ while(true)
   $current_contestants = $Model->current_contestants();
   if(intval($current_contestants) > 0)
   {
-    $conversation = "We have so far "  . $current_contestants . " contestants for the current round of the Hole In One tournament";
+    $conversation = "We have so far "  . $current_contestants . " contestants for the current round of the Hole In One competition";
     $tweets[] = $conversation;
     $facebook_posts[] = $conversation;
 
   }
-  $conversation =  "Have you booked your place yet to win big in the Hole In One tournament? Enter now, visit http://hiog.mobi for more information.";
+  $conversation =  "Have you booked your place yet to win big in the Hole In One competition? Enter now, visit http://hiog.mobi for more information.";
   $tweets[] = $conversation;
   $facebook_posts[] = $conversation;
 
