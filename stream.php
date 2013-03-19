@@ -214,7 +214,7 @@ while(true)
 
   }
 
-  msg('Processing tweets complete!');
+  msg('Further processing deferred for the next 18 hours.');
   sleep (64800000);
 
 
