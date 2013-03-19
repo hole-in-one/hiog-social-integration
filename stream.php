@@ -210,7 +210,8 @@ while(true)
 
   }
 
-  sleep (1800000);
+  msg('Processing tweets complete!');
+  sleep (64800000);
 
 
 }
