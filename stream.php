@@ -6,6 +6,7 @@
 * @version      $Id: controller.php
 * @author       Temba Mazingi
 * @description  read and write configuration parameters to file
+* @resources     https://github.com/dtompkins/fbcmd, https://github.com/dg/twitter-php, http://oauth.googlecode.com/svn/code/php/
 *
 **/
 
